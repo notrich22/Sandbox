@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4b9fbeda-eae6-47c3-bae5-e205f277a037}</ProjectGuid>
-    <RootNamespace>Sandbox</RootNamespace>
+    <ProjectGuid>{13d77871-8abb-417c-8fe9-1e3eca716b54}</ProjectGuid>
+    <RootNamespace>XO</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Pasport</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -141,6 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Round.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="TTTround.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

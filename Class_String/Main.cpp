@@ -16,10 +16,10 @@ int main() {
 	cout << "(+=CHECK)Str1+Str3="; str1.print();
 	str1.clear();
 	cout << "Str1 cleared: "; str1.print(); cout << endl;
-	String* binstr = new BinaryString("10001");
-	binstr->print();
+	String* binstr1 = new BinaryString("10001");
+	cout << "Bin_String: "; binstr1->print();
 	String* binstr2 = new BinaryString("10001");
-	cout << "BStr1 & BStr2:"; (binstr == binstr2) ? cout << "EQUAL" << endl : cout << "NOT EQUAL" << endl;
-	cout << "Str1 & Str3:"; (binstr != binstr2) ? cout << "NOT EQUAL" << endl : cout << "EQUAL" << endl;
-
+	cout << "Bin_String2: "; binstr2->print();
+	//cout << "BStr1 & \"10001\":"; (binstr1 = "10001") ? cout << "EQUAL" << endl : cout << "NOT EQUAL" << endl;
+	cout << "BStr1 & BStr2:"; (binstr1 != binstr2) ? cout << "NOT EQUAL" << endl : cout << "EQUAL" << endl;
 }

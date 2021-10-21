@@ -2,12 +2,13 @@
 #include "ChatBot.h"
 #include "Bot1.h"
 #include "Bot2.h"
+#include "SmartPointer.cpp"
 using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "ru");
-	ChatBot* BinBot = new Bot1;
-	ChatBot* Smarty = new VerySmartBot;
+	smart_pointer<ChatBot> BinBot = new Bot1;
+	smart_pointer<ChatBot> Smarty = new VerySmartBot;
 	string msg;
 	cout << "¬ведите сообщение: "; cin >> msg;
 	cout << "BinBot:" << endl;
@@ -15,7 +16,5 @@ int main() {
 	cout << "VerySmartBot:" << endl;
 	Smarty->answer(msg);
 	cout << "";
-	delete BinBot;
-	delete Smarty;
 	return 0;
 }

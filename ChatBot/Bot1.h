@@ -11,10 +11,15 @@ public:
 		for (int i = 0; i < str.length(); i++) {
 			if (str[i] != 48 && str[i] != 49) { binary = false; break; }
 		}
-		if (binary) {
-			cout << "Поздравляю, Вы знаете мой язык! =)" << endl;
+		try {
+			if (binary) {
+				cout << "Поздравляю, Вы знаете мой язык! =)" << endl;
+			}
+			else {
+				throw - 1;
+			}
 		}
-		else {
+		catch (int) {
 			cout << "К сожалению я понимаю только двоичный код =(" << endl;
 		}
 	}

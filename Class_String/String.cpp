@@ -68,7 +68,7 @@ public:
 	int get_length() {
 		return length;
 	}
-	void print() {
+	virtual void print() {
 		for (int i = 0; i < this->length; i++) {
 			cout << symbol[i];
 		}
@@ -94,7 +94,18 @@ public:
 		else
 			return *this;
 	}
-
+	bool operator==(BinaryString str) {
+		for (int i = 0; i < str.length; i++) {
+			if (symbol[i] != str.symbol[i])return false;
+		}
+		return true;
+		}
+	bool operator==(string str) {
+		for (int i = 0; i < str.length(); i++) {
+			if (symbol[i] != str[i])return false;
+		}
+		return true;
+		}
 	//Constructors and destructors
 	BinaryString() {
 #ifdef DEBUG
@@ -115,7 +126,12 @@ public:
 
 #endif // DEBUG
 	}
-
+	void print() {
+		for (int i = 0; i < this->length; i++) {
+			cout << symbol[i];
+		}
+		cout << endl;
+	}
 	// Methods
 	bool chk_bin(string str) {
 		for (int i = 0; i < str.length(); i++)
